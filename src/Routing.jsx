@@ -14,6 +14,8 @@ import Notifications from './pages/SideBar/Notifications';
 import Settings from './pages/SideBar/Settings';
 import Account from './pages/SideBar/Account';
 import ErrorPage from './pages/ErrorPage';
+import ViewProperty from './pages/ViewProperty';
+import EditProperty from './pages/EditProperty';
 
 const Routing = () => {
   return (
@@ -33,6 +35,8 @@ const Routing = () => {
               <Route path="/notifications" element={<Notifications />} />
               <Route path="/settings" element={<Settings />} />
               <Route path="/account" element={<Account />} />
+              <Route path="/view-property" element={<ViewProperty />} />
+              <Route path="/edit-property" element={<EditProperty />} />
               <Route path="*" element={<ErrorPage />} />
             </Routes>
           </div>

@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import { Search, Plus, MapPin, Eye, Edit2 } from 'lucide-react';
 import './Properties.css';
 
@@ -66,6 +67,7 @@ const propertiesData = [
 ];
 
 const Properties = () => {
+  const navigate = useNavigate();
   const [search, setSearch] = useState('');
   const [typeFilter, setTypeFilter] = useState('');
   const [locFilter, setLocFilter] = useState('');
@@ -159,11 +161,11 @@ const Properties = () => {
                 </div>
 
                 <div className="properties-card-actions">
-                  <button className="properties-btn-view">
+                  <button className="properties-btn-view" onClick={() => navigate('/view-property')}>
                     <Eye size={18} />
                     View
                   </button>
-                  <button className="properties-btn-edit">
+                  <button className="properties-btn-edit" onClick={() => navigate('/edit-property')}>
                     <Edit2 size={18} />
                     Edit
                   </button>
